@@ -1,10 +1,14 @@
-# Apollo Example
+# Apollo With Subscription Example
 
 [Apollo](https://www.apollographql.com/client/) is a GraphQL client that allows you to easily query the exact data you need from a GraphQL server. In addition to fetching and mutating data, Apollo analyzes your queries and their results to construct a client-side cache of your data, which is kept up to date as further queries and mutations are run, fetching more results from the server.
 
 In this simple example, we integrate Apollo seamlessly with Next by wrapping our `pages/index.js` inside a [higher-order component (HOC)](https://facebook.github.io/react/docs/higher-order-components.html). Using the HOC pattern we're able to pass down a central store of query result data created by Apollo into our React component hierarchy defined inside each page of our Next application.
 
 On initial page load, while on the server and inside `getInitialProps`, we invoke the Apollo method, [`getDataFromTree`](https://www.apollographql.com/docs/react/api/react-ssr/#getdatafromtree). This method returns a promise; at the point in which the promise resolves, our Apollo Client store is completely initialized.
+
+## In addition to this, we configure our apollo client to work with ## subscriptions on the client-side and ensures that only subscription ## operations are made through websockets.
+
+To see a working example of this, navigate to the Subscription-example page and open up the url in two browsers. Submit a link in the first browser and check the other browser, you'd see the newly submitted link show up instantly without your need to refresh the page.
 
 This example relies on [graph.cool](https://www.graph.cool) for its GraphQL backend.
 
