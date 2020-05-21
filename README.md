@@ -6,7 +6,7 @@ In this simple example, we integrate Apollo seamlessly with Next by wrapping our
 
 On initial page load, while on the server and inside `getInitialProps`, we invoke the Apollo method, [`getDataFromTree`](https://www.apollographql.com/docs/react/api/react-ssr/#getdatafromtree). This method returns a promise; at the point in which the promise resolves, our Apollo Client store is completely initialized.
 
-## In addition to this, we configure our apollo client to work with subscriptions on the client-side and ensures that only subscription operations are made through websockets.
+## In addition to this, we configure our apollo client to work with subscription on the client-side and ensures that only subscription operations are made through websockets.
 
 To see a working example of this, navigate to the Subscription-example page and open up the url in two browsers. Submit a link in the first browser and check the other browser, you'd see the newly submitted link show up instantly without your need to refresh the page.
 
@@ -21,7 +21,7 @@ Deploy the example using [Vercel](https://vercel.com):
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/zeit/next.js/tree/canary/examples/with-apollo)
 
-_Live Example: https://next-with-apollo.now.sh_
+\_Live Example: https://with-apollo-subscription.now.sh/subscription
 
 ## How to use
 
@@ -30,9 +30,9 @@ _Live Example: https://next-with-apollo.now.sh_
 Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
 ```bash
-npm init next-app --example with-apollo with-apollo-app
+npm init next-app --example with-apollo-subscription with-apollo-subscription-app
 # or
-yarn create next-app --example with-apollo with-apollo-app
+yarn create next-app --example with-apollo-subscription with-apollo-subscription-app
 ```
 
 ### Download manually
@@ -40,8 +40,8 @@ yarn create next-app --example with-apollo with-apollo-app
 Download the example:
 
 ```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-apollo
-cd with-apollo
+curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-apollo-subscription
+cd with-apollo-subscription
 ```
 
 Install it and run:
